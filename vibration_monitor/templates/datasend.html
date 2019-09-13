@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   
+    </head>
+    <body >
+         <h2>Data Sending</h2> Got a question ? Feedback? Awesome! 
+                    <form method="post" id="reused_form" action= "/dataview/datarecieve/value"  >
+                            <label for="Serial"> Serial:</label>
+                            <input type="text" id="serial" name="serial" required maxlength="50">
+                            
+                            <label for="c02"> C02:</label>
+                            <input type="text"  id="c02" name="c02" required maxlength="50">
+                            
+                            <label for="pm25"> PM25:</label>
+                            <input type="text" id="pm25" name="pm25" required maxlength="50">
+                            
+                            {%csrf_token%}
+                        <button type="submit" id="btnContactUs">Post It! &rarr;</button>
+                    </form>               
+    </body>
+</html>
