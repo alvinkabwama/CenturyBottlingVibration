@@ -50,10 +50,10 @@
             <thead class="thead-dark">
                 <tr class="text-center">
                     <th>Date and Time </th>
-                    <th>S1 (Bottle Filler Main Drive)</th>
-                    <th>S2 (Bottle Washer Discharge Drive 8)</th>
-                    <th>S3 (Bottle Washer Main Infeed Drive 1)</th>
-                    <th>S4 (Bottle Washer Infeed Drive 2)</th>
+                    <th><a href="{% url 'graphview' 'v1_sensor' %}">S1 (Bottle Filler Main Drive)</a></th>
+                    <th><a href="{% url 'graphview' 'v2_sensor' %}">S2 (Bottle Washer Discharge Drive 8)</a></th>
+                    <th><a href="{% url 'graphview' 'v3_sensor' %}">S3 (Bottle Washer Main Infeed Drive 1)</a></th>
+                    <th><a href="{% url 'graphview' 'v4_sensor' %}">S4 (Bottle Washer Infeed Drive 2)</a></th>
 
                 </tr>
             </thead>
