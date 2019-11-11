@@ -19,5 +19,6 @@ from . import views
 urlpatterns = [
     path('datareceive', views.datareceive, name='datareceive'),
     path('datashow', views.datashow, name='datashow'),
+    path('graphview/<str:sensor>', views.graphview, name='graphview'),
 
 ]
