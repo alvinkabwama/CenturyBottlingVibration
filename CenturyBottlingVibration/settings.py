@@ -25,7 +25,7 @@ SECRET_KEY = 'cv4d5t0jxyr+!iy&az_@8@$v!!lx16dyrrii2mvmq9y1f3#m!9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vibrationmonitor.pythonanywhere.com']
+ALLOWED_HOSTS = ['vibrationmonitor.pythonanywhere.com', 'localhost']
 
 
 # Application definition
