@@ -2,59 +2,59 @@
 <html lang="en">
 <head>
     <title> DATA </title>
-   
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
-    
+
+
     <style>
     h1
     {
       margin-bottom: 50px;
      }
-    
+
     .table-edits
     {
      font-size: 15px ;
      }
-    
+
     .table-edits tbody tr td, .table-edits thead tr th
     {
      padding: 0.3rem ;
      }
-    
-    </style>	
+
+    </style>
 </head>
 <body>
     <div class = "container"><br>
-        <h1 class = "text-center"> 
-            CENTURY BOTTLING WASHER VIBRATION MONITORING
+        <h1 class = "text-center">
+            CENTURY BOTTLING LINE 3 VIBRATION MONITORING
         </h1>
-        
+
         <div>
-        <h3> 
-        
-            Bitsinze Nkurunziza   
-                                   
+        <h3>
+
+            Bitsinze Nkurunziza
+
         </h3>
-        
-        <h3 class = "ml-auto"> 
-          
+
+        <h3 class = "ml-auto">
+
             Serial Number :  {{selectdevicenumber}}
-            
+
         </h3>
-        
+
         </div>
-        
-        
+
+
         <table class="table table-striped table-edits table-bordered">
             <thead class="thead-dark">
-                <tr class="text-center">   
+                <tr class="text-center">
                     <th>Date and Time </th>
-                    <th>Sensor 1 </th>
-                    <th>Sensor 2</th>
-                    <th>Sensor 3</th>
-                    <th>Sensor 4</th>
-                  
+                    <th><a href="{% url 'graphview' 'v1_sensor' %}">S1 (Bottle Filler Main Drive)</a></th>
+                    <th><a href="{% url 'graphview' 'v2_sensor' %}">S2 (Bottle Washer Discharge Drive 8)</a></th>
+                    <th><a href="{% url 'graphview' 'v3_sensor' %}">S3 (Bottle Washer Main Infeed Drive 1)</a></th>
+                    <th><a href="{% url 'graphview' 'v4_sensor' %}">S4 (Bottle Washer Infeed Drive 2)</a></th>
+
                 </tr>
             </thead>
                 <tbody>
@@ -65,18 +65,18 @@
                     <td>{{data.v2_sensor}}</td>
                     <td>{{data.v3_sensor}}</td>
                     <td>{{data.v4_sensor}}</td>
-                    
-                </tr>              
+
+                </tr>
                 {% endfor %}
-                        
+
                 </tbody>
             </table>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>	
-		
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
 </body>
 </html>
