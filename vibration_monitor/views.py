@@ -25,12 +25,12 @@ def graphview(request, sensor):
     ylabels = []
 
     alldata = Data.objects.filter(
-        serial_number=selectdevicenumber).values("date_time", sensor).order_by("-pk")[:50]
+        serial_number=selectdevicenumber).values("date_time", sensor).order_by("-pk")
     for data in alldata:
-        xlabels.append(data['date_time'].strftime("%Y-%m-%d %H:%M:%S"))
+        xlabels.append(data['date_time'].strftime("%Y-%m-%d %H:%M"))
         ylabels.append(int(float(data[sensor])))
    
-    context = {'xlabels': xlabels[::-1], 'ylabels': ylabels[::-1],'sensor': sensor,
+    context = {'xlabels': xlabels[::-1000], 'ylabels': ylabels[::-1],'sensor': sensor,
                'selectdevicenumber': selectdevicenumber}
     return render(request, 'graphview.html', context)
 
